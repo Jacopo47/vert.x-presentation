@@ -2,7 +2,7 @@ name: Build and publish presentation
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
