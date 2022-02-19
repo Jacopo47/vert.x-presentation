@@ -1,6 +1,6 @@
 name: Build and publish presentation
 on:
-  commit:
+  push:
     branches:
       - master
 
