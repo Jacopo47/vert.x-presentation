@@ -1,0 +1,23 @@
+name: Build and publish presentation
+on:
+  commit:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+    - run: npm install @marp-team/marp-cli
+    - run: npx @marp-team/marp-cli@latest vert.x.md -o output.pdf
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: output.pdf
+        asset_name: vert.x-presentation.pdf
+        tag: ${{ github.ref }}
