@@ -21,3 +21,4 @@ jobs:
         file: output.pdf
         asset_name: vert.x-presentation.pdf
         tag: ${{ github.ref }}
+        overwrite: true
