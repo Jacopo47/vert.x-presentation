@@ -106,3 +106,31 @@ By default Vert.x creates 2 * N_CORES event-loops.
 
 ### How atomicity is guaranteed?
 
+* Handler will never be executed concurrently;
+* In most cases will always be called using the exact same event loop.
+
+---
+
+# Golden Rule - Don't block the event loop
+
+Vert.x API are non-blocking, but handlers...
+
+* Thread sleep;
+* Waiting for a lock;
+* Database query;
+* Network call;
+* Complex calculation;
+* etc.. 
+
+These operations will prevent other handlers to be consider for a *significant  amount of time*
+
+Vert.x will help you in identify these cases through logs like: 
+
+> Thread vertx-eventloop-thread-3 has been blocked for 20458 ms
+
+---
+
+# Futures
+
+## Results - composition - coordination
+
