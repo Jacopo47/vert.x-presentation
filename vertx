@@ -1,0 +1,17 @@
+#!/bin/bash
+
+VERTX_FOLDER=./dist
+VERTX_BINARY=$VERTX_FOLDER/vertx/bin/vertx
+TMP_FILE=app.zip
+
+
+if [ -e $VERTX_BINARY ]
+then
+    $VERTX_BINARY --version | echo "Vertx version:"
+else 
+    curl https://repo1.maven.org/maven2/io/vertx/vertx-stack-manager/4.2.5/vertx-stack-manager-4.2.5.zip > $TMP_FILE
+    unzip -d $VERTX_FOLDER $TMP_FILE
+    rm $TMP_FILE
+
+    $VERTX_BINARY --version | echo "Vertx version:"
+fi
