@@ -214,8 +214,15 @@ public static void  main(String[] args) {
 
 # Event bus
 
+> "Nervous system of Vert.x"
 
+It is delivering messages to Verticles, even remote verticles (cluster), event client-side JS if it's bridged.
 
+* **Address**: Messages are sent on the event bus to an address.
+* **Handler**: Messages are received by handlers. You register a handler at an address.
+* **Pub/Sub**: The event bus supports publishing messages.
+* **Point-to-Point**: Messages are sent to an address. Vert.x will then route them to just one of the handlers registered at that address.
+* **Request-Response**: With point-to-point messaging, an optional reply handler can be specified when sending the message.
 
 
 ---
