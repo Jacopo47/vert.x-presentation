@@ -232,4 +232,14 @@ It is delivering messages to Verticles, even remote verticles (cluster), event c
 * Concurrency is handled by library
 * Verticles are scalable
 * Though event bus Verticles can exchange messages
-* Verticle has an internal state that is accessible through event bus messages exchange 
+* Verticle has an internal state that is accessible through event bus messages exchange
+
+
+---
+
+# Context
+
+When handler need to share data!
+Execution is associated with a *Context*, handlers can share variables through it
+
+Vert.x Web library piggybacks a RoutingContext to context in order to share data between handlers for the lifetime of the request
