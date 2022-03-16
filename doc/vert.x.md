@@ -169,7 +169,7 @@ Please do not create here your own thread! Or.. if so.. **take your responsabili
 
 ## Worker
 
-Usefull in order to run blocking code out of the event loops. 
+Useful in order to run blocking code out of the event loops. 
 Vert.x provide a pool of worker but we can deploy our own verticles as worker.
 
 
@@ -228,3 +228,8 @@ It is delivering messages to Verticles, even remote verticles (cluster), event c
 ---
 
 # If you close one eye.. you can see Actors!
+
+* Concurrency is handled by library
+* Verticles are scalable
+* Though event bus Verticles can exchange messages
+* Verticle has an internal state that is accessible through event bus messages exchange 
