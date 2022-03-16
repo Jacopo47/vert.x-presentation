@@ -242,4 +242,4 @@ It is delivering messages to Verticles, even remote verticles (cluster), event c
 When handler need to share data!
 Execution is associated with a *Context*, handlers can share variables through it
 
-Vert.x Web library piggybacks a RoutingContext to context in order to share data between handlers for the lifetime of the request
+Vert.x Web library piggybacks a RoutingContext to context in order to share data between handlers for the lifetime of the request.
