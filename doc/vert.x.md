@@ -6,7 +6,7 @@ paginate: true
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ---
 
-![bg left:40% 80%](img/vertx.svg)
+![bg left:40% 80%](../img/vertx.svg)
 
 ## Riciputi Jacopo
 Reactive applications on the JVM
@@ -32,7 +32,7 @@ But your service need to handle a lot events so you need them.
 # Blocking vs non-Blocking
 
 ### Performance's enemies: context-switching, I/O operations
-![](img/blocking-threads.svg)
+![](../img/blocking-threads.svg)
 
 
 
