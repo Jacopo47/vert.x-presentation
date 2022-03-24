@@ -243,3 +243,22 @@ When handler need to share data!
 Execution is associated with a *Context*, handlers can share variables through it
 
 Vert.x Web library piggybacks a RoutingContext to context in order to share data between handlers for the lifetime of the request.
+
+---
+
+# Ecosystem
+
+* HTTP server and client libraries 
+* Database clients
+* Messaging systems clients
+* Tracing
+* Monitoring
+* Circuit breaker
+* and more https://vertx.io/docs/
+
+
+---
+
+# Built with Marp
+## [https://marp.app/](https://marp.app/)
+![bg left:40% 80%](../img/marp.png)
